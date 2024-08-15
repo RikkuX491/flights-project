@@ -8,6 +8,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import ErrorPage from './components/ErrorPage';
 import FlightList from './components/FlightList';
+import About from './components/About';
+import NewFlightForm from './components/NewFlightForm';
 
 const router = createBrowserRouter([
   {
@@ -21,11 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/add_flight",
-        element: <h1>Add a new flight here:</h1>
+        element: <NewFlightForm/>
       },
       {
         path: "/about",
-        element: <h1>About Us</h1>
+        element: <About/>
       }
     ]
   }

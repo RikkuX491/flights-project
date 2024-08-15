@@ -18,11 +18,24 @@ function App() {
     .then(flightsData => setFlights(flightsData))
   }, [])
 
+  function addFlight(newFlight){
+    fetch("http://localhost:7000/flights", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newFlight)
+    })
+    .then(response => response.json())
+    .then(newFlightData => setFlights([...flights, newFlightData]))
+  }
+
   return (
     <div className="App">
       <NavBar/>
       <Header/>
-      <Outlet context={{flights: flights}}/>
+      <Outlet context={{flights: flights, addFlight: addFlight}}/>
     </div>
   );
 }
