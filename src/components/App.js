@@ -16,13 +16,18 @@ function App() {
     .then(setFlights)
   }
 
+  function addFlight(newFlight){
+    setFlights([...flights, newFlight])
+  }
+
   return (
     <div className="app">
       <NavBar/>
       <Header/>
       <Outlet context={
         {
-          flights: flights
+          flights: flights,
+          addFlight: addFlight
         }
       }/>
     </div>
