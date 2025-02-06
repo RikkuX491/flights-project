@@ -5,7 +5,17 @@ const routes = [
     {
         path: "/",
         element: <App/>,
-        errorElement: <ErrorPage/>
+        errorElement: <ErrorPage/>,
+        children: [
+            {
+                path: "/",
+                element: <h1>Render the list of flights here...</h1>
+            },
+            {
+                path: "/add_flight",
+                element: <h1>Form to add a new flight goes here...</h1>
+            }
+        ]
     }
 ]
 
