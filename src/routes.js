@@ -1,6 +1,7 @@
 import App from "./components/App"
 import ErrorPage from "./components/ErrorPage";
 import FlightList from "./components/FlightList";
+import NewFlightForm from "./components/NewFlightForm";
 
 const routes = [
     {
@@ -14,7 +15,7 @@ const routes = [
             },
             {
                 path: "/add_flight",
-                element: <h1>Form to add a new flight goes here...</h1>
+                element: <NewFlightForm/>
             },
             {
                 path: "/about",
