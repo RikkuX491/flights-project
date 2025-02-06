@@ -1,9 +1,10 @@
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function NewFlightForm(){
 
     const { addFlight } = useOutletContext();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         airline: "",
@@ -37,6 +38,7 @@ function NewFlightForm(){
             if(response.ok){
                 response.json().then(newFlightData => {
                     addFlight(newFlightData)
+                    navigate('/')
                 })
             }
             else{
