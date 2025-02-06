@@ -1,5 +1,6 @@
 import App from "./components/App"
 import ErrorPage from "./components/ErrorPage";
+import FlightList from "./components/FlightList";
 
 const routes = [
     {
@@ -9,7 +10,7 @@ const routes = [
         children: [
             {
                 path: "/",
-                element: <h1>Render the list of flights here...</h1>
+                element: <FlightList/>
             },
             {
                 path: "/add_flight",
