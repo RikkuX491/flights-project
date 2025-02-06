@@ -8,8 +8,6 @@ function App() {
 
   const [flights, setFlights] = useState([])
 
-  console.log(flights)
-
   useEffect(retrieveFlights, [])
 
   function retrieveFlights(){
@@ -22,7 +20,11 @@ function App() {
     <div className="app">
       <NavBar/>
       <Header/>
-      <Outlet/>
+      <Outlet context={
+        {
+          flights: flights
+        }
+      }/>
     </div>
   );
 }
