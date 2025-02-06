@@ -1,5 +1,14 @@
+import NavBar from "./NavBar";
+import Header from "./Header";
+
 function ErrorPage(){
-    return <h1>Whoops! Something went wrong.</h1>
+    return (
+        <div className="app">
+            <NavBar/>
+            <Header/>
+            <h1>Whoops! Something went wrong.</h1>
+        </div>
+    )
 }
 
 export default ErrorPage;
