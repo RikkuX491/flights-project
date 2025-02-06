@@ -3,7 +3,7 @@
         {
             "id": 1,
             "airline": "Emirates",
-            "image": "",
+            "image": "./images/emirates.png",
             "price": 2000,
             "origin": "JFK: New York, NY, USA",
             "destination": "ATH: Athens, Greece"
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "airline": "Delta",
-            "image": "",
+            "image": "./images/delta.png",
             "price": 1500,
             "origin": "JFK: New York, NY, USA",
             "destination": "HNL: Honolulu, HI, USA"
