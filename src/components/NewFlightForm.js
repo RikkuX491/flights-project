@@ -43,8 +43,6 @@ function NewFlightForm(){
                 alert("Error: Unable to add new flight!")
             }
         })
-
-        // addFlight(newFlight)
     }
 
     return (
